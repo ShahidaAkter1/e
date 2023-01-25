@@ -1,0 +1,25 @@
+#popup2 .popup .content form .new_name{
+    padding: 10px ;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    background-color: black;
+    margin-bottom: 20px;
+}
+#popup2 .popup .content {
+background-color: black; 
+border-radius: 10px;
+}
+#popup2 .popup .content p{
+color: white;
+}
+#popup2 .popup .content form .new_name::placeholder {  
+color: red;
+opacity: 1;  
+}
+
+

@@ -1,0 +1,156 @@
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    color: white;
+ }
+
+ .navbar ul li{
+    width: 160px;
+    margin-top: 20px;
+    
+   
+     
+ }
+ .navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+ }
+ .navbar ul li a i{
+    margin-right: 5px;
+ }
+
+ .active
+ {
+    background-color: white;
+    border-radius: 3px;
+    
+
+ }
+
+ .submenu{
+    display: none;
+ }
+ .navbar ul li:hover .submenu{
+    display: block;
+    position: absolute;
+    background-color: rgb(181, 190, 181);
+    margin-top: 0px;
+    margin-left: 15px;
+    border-radius: 5px;
+ }
+
+ .navbar ul li:hover .submenu ul{
+    display: block;
+ 
+   
+ }
+ .navbar ul li:hover .submenu ul li{
+    width: 150px;
+    padding: 5px;
+    border-bottom: 1px dotted black;
+    background: transparent;
+    border-radius: 0px;
+    text-align: left;
+ }
+ .navbar ul li:hover .submenu ul li:last-child{
+    border-bottom: none;
+ }
+
+ .navbar ul li:hover .submenu ul li a:hover{
+    color: white;
+
+ }
+
+
+ 
+
+
+
+
+
+ .icons ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    color: white;
+ }
+
+ .submenu{
+    display: none;
+ }
+ .icons ul li:hover .submenu{
+    display: block;
+    position: absolute;
+    background-color: rgb(131, 122, 122);
+    margin-top: 1px;
+    margin-right: 50px;
+    border-radius: 5px;
+    width: 250px;
+    margin-left: -60px;
+    margin-bottom: 10px;
+ }
+
+ .icons ul li:hover .submenu table tr td{
+     
+    padding: 5px 10px;
+     font-size: 18px;
+ 
+   
+ }
+ .icons ul li:hover .submenu table tr{
+    margin-top: 10px; 
+ }
+ .icons ul li:hover .submenu table{
+    margin-top: 10px; 
+ }
+  
+ .icons ul li:hover .submenu  button a{
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    
+
+ }
+ .icons ul li:hover   button{
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: center;
+
+   
+ }
+
+ .setting{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+     
+ }
+ 
+
+ #profile_header{
+    font-size: 20px;
+    padding: 15px 10px;
+    border-radius: 5px;
+ }
+ 
+ .icons ul li:hover   button a:hover{
+  
+    color: red;
+    transition: .2s ease;
+ }

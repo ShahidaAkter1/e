@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite List</title>
+    <link rel="stylesheet" href="more_less.css">
+    <link rel="stylesheet" href="ui/css/cart.css">
+     
+ 
+</head>
+<body>
+
+    <section class="review1" id="review">
+
+        <h1 class="heading"> Favorite  <span>List</span> </h1>
+    
+        <div class="box-container"> 
+
+            <div class="box">            
+                <h1  >Sandals</h1>
+               <p>Product count    : <span>10</span></p>
+               <p>Category count : <span>10</span></p>
+              <a href="#view_popup">  <button class="view_button">Show Product</button></a>
+            </div>   
+         
+            <div class="box">            
+                <h1  >Sandals</h1>
+               <p>Product count : <span>10</span></p>
+               <p>Category count : <span>10</span></p>
+              <a href="#view_popup">  <button class="view_button">Show Product</button></a>
+            </div>   
+    
+             
+
+
+        </div>  
+    </section>
+
+
+
+ <br><br><br><br><br><br><b>
+ </b> 
+ <br><b>
+    <br>
+ </b>
+
+
+  
+
+
+
+ 
+
+
+<div class="container">
+
+   <div class="table_total">
+   <div class="table">
+      <table id="customers">
+        <tr>
+          <th>Serial</th>     
+          <th>Image</th> 
+          <th>Name</th>
+          <th>Price</th> 
+          <th>Quantity</th> 
+          <th>Total</th>
+          <th  colspan="2">Action</th>
+        </tr>
+     
+    <tr>   
+            <td>$serial</td>   
+            <td><img src="data:image;base64,'.base64_encode($product_image).'"  width="50" height="50"></td>
+            <td>$product_name</td>
+            <td>TK$product_price</td>               
+            <td>       
+                <div class="qt">
+                <form action="cart.php" method="post">
+                <input type="submit" value="-" name="decrease">       
+                <p>$product_quantity</p>
+                <input type='hidden' name='previous_quantity' value='$product_quantity'> 
+                <input type='hidden' name='product_id_quantity' value='$product_id'>
+                <input type='submit' value='+' name='increase'>
+                </form>
+                </div>
+         </td>
+         <td> $total</td>
+         <td> <button class='btn_cart'> <a href='pro_details.php?view_Id=".$row['id']."'  >View</a></button> </td>
+         <td>  <button class='btn_cart2'>   <a href='cart_php.php?delete_Id=".$row['id']."' >Delete</a>  </button></td>
+    </tr>   
+     
+ 
+ 
+
+    </table>
+
+    </div>
+
+   </div>
+</div>
+
+
+
+
+
+
+    <section class="review1" id="review">
+
+        <h1 class="heading"> Favorite  <span>List</span> </h1>
+    
+        <div class="box-container"> 
+
+            <div class="box">            
+                <h1  >Sandals</h1>
+               <p>Product count    : <span>10</span></p>
+               <p>Category count : <span>10</span></p>
+              <a href="#popup1">  <button class="view_button">Show Product</button></a>
+            </div>   
+         
+            <div class="box">            
+                <h1  >Sandals</h1>
+               <p>Product count : <span>10</span></p>
+               <p>Category count : <span>10</span></p>
+              <a href="#view_popup">  <button class="view_button">Show Product</button></a>
+            </div>   
+    
+             
+
+
+        </div>  
+    </section>
+
+
+
+
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+          <h2>Products List</h2>
+          
+          <a class="close" href="#products"> &times;</a>
+          <div class="content">     
+
+            <div class="container">
+
+                <div class="table_total">
+                <div class="table">
+                   <table id="customers">
+                     <tr>
+                       <th>Serial</th>     
+                       <th>Image</th> 
+                       <th>Name</th>
+                       <th>Price</th> 
+                       <th>Quantity</th> 
+                       <th>Total</th>
+                       <th  colspan="2">Action</th>
+                     </tr>
+                  
+                 <tr>   
+                         <td>$serial</td>   
+                         <td><img src="data:image;base64,'.base64_encode($product_image).'"  width="50" height="50"></td>
+                         <td>$product_name</td>
+                         <td>TK$product_price</td>               
+                         <td>       
+                             <div class="qt">
+                             <form action="cart.php" method="post">
+                             <input type="submit" value="-" name="decrease">       
+                             <p>2</p>
+                             <input type='hidden' name='previous_quantity' value='$product_quantity'> 
+                             <input type='hidden' name='product_id_quantity' value='$product_id'>
+                             <input type='submit' value='+' name='increase'>
+                             </form>
+                             </div>
+                      </td>
+                      <td> $total</td>
+                      <td> <button class='btn_cart'> <a href='pro_details.php?view_Id=".$row['id']."'  >View</a></button> </td>
+                      <td>  <button class='btn_cart2'>   <a href='cart_php.php?delete_Id=".$row['id']."' >Delete</a>  </button></td>
+                 </tr>   
+                  
+              
+              
+             
+                 </table>
+             
+                 </div>
+             
+                </div>
+             </div>
+             
+
+
+                  
+          </div>
+
+           
+        </div>
+    </div>
+    
+    
+      
+
+
+</body>
+</html>

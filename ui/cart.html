@@ -1,0 +1,157 @@
+ 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+     <!-- font awesome cdn link  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+<header>
+
+<!-- for ahemburg  or 3bar -->
+<div id="menu-bar"  class="fas fa-bars"></div>
+
+<a href="#" class="logo">nike</a>
+
+<nav class="navbar">
+    <a href="index.php"  >home</a>
+    <a href="product.php" target="_blank">products</a>
+    <a href="#" target="_blank">featured</a>
+    <a href="review.php" target="_blank">review</a>
+    <a href="#review" target="_blank">Blog</a>
+    <a href="contact.php" target="_blank">Contact US</a>
+    <a href="s&r.php" target="_blank">S&R</a>
+    <a href="about.php" target="_blank">About US</a>
+</nav>
+
+<div class="icons">
+     
+    <a href="#" class="fas fa-shopping-cart" class="active"> </a>
+    <a href="#" class="fas fa-user"></a>
+    <a href="#" >Login</a>
+    <a href="index.php?logout=<?php echo $user_id;  ?>" onclick="return confirm('Are you sure want to logout??')" >Logout</a>
+     
+</div>
+
+</header>
+
+<!-- header section ends -->
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="heading">
+            <h1>MY CART</h1>
+        </div>
+   <div class="table_total">
+   <div class="table">
+      <table id="customers">
+        <tr>
+          <th>Serial</th>     
+          <th>Image</th> 
+          <th>Name</th>
+          <th>Price</th> 
+          <th>Quantity</th> 
+          <th  colspan="2">Action</th>
+        </tr>
+ 
+       <tr><td>$serial</td>  ";   
+       $_SESSION['product_count_cart_icon']= $serial;
+          echo '<td><img src="data:image;base64,'.base64_encode($product_image).'"  width="50" height="50"></td>';
+           
+            <td>$product_name</td>
+           <td>TK$product_price</td>            
+
+         <td>       
+         <div class="qt">
+         <form action="cart.php" method="post" >
+      
+            <input type="submit" value="-" name="decrease">   
+        
+                 
+       <p>2</p>
+          
+        
+            <input type='hidden' name='previous_quantity' value='$product_quantity'> 
+         <input type='hidden' name='product_id_quantity' value='$product_id'>
+
+         <input type='submit' value='+' name='increase'>
+          
+         </form>
+         </div>
+        </td>
+  
+
+          <td> <button class='btn_cart'> <a href='pro_details.php?view_Id=".$row['id']."'  >View</a></button> </td>
+          <td>  <button class='btn_cart2'>   <a href='cart_php.php?delete_Id=".$row['id']."' >Delete</a>  </button></td>
+           </tr>   
+     </tr>    
+
+
+    </table>
+
+    </div>
+ 
+    <div class="viewdescription">
+        <table>
+           <tr>
+               <td>Subtotal</td>
+               <td> Tk510 </td>
+           </tr>
+           <tr>
+               <td>Delivery Charge</td>
+               <td>Tk  40  </td>
+           </tr>
+           <tr>
+            <td>Discount</td>
+            <td>  TK0  </td>
+        </tr> 
+           <tr>
+               <td>Grand Total</td>
+               <td> Tk560   </td>
+           </tr>
+   
+ 
+           </tr>
+        </table>
+        <hr>  
+        <div class="payment">
+            <label for="payment">Payment :</label>
+            <select >
+                <option value="pay_method">Cash on delivery</option>        
+              <option value="pay_method">Online Method</option>    
+            </select>
+          </div>
+
+
+
+        <button class="btn" name="checkout"  > Make Purchase </button>
+    </div>
+    
+ 
+
+        
+</div>
+
+ 
+
+ 
+ 
+
+</body>
+</html>

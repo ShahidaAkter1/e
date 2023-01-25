@@ -1,0 +1,123 @@
+ 
+
+
+
+   /*latest product start  */
+.product .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: center;
+ 
+  
+
+}
+
+.product .box-container .box{
+  border:.1rem solid rgba(0,0,0,.1);
+  border-radius: .5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:#f9f9f9;
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  margin-top: 40px;
+
+
+}
+
+.product .box-container .box .content{
+  padding:10px
+}
+
+.product .box-container .box img{
+  width: 100%;
+  border-radius: 10px;
+  height: 450px;
+ 
+}
+
+ 
+.product .box-container .box .icons{
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  top:.8rem;
+  left:-5rem;
+}
+
+.product .box-container .box:hover .icons{
+  left:1.4rem;
+}
+
+.product .box-container .box .icons a{
+  height:4.5rem;
+  width:5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color:var(--black);
+  border:.1rem solid var(--black);
+  border-radius: .5rem;
+  background:#fff;
+  margin-top: .5rem;
+}
+
+.product .box-container .box .icons a:hover{
+  background:var(--orange);
+  color:#fff;
+}
+
+.product .box-container .box .content h3{
+  color:var(--black);
+  font-size: 2.5rem;
+}
+
+.product .box-container .box .content .price{
+  color:var(--black);
+  font-size: 2.5rem;
+  font-weight: bolder;
+  padding:1rem 0;
+}
+
+.product .box-container .box .content .price span{
+  color:var(--orange);
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+.product .box-container .box .content .stars{
+  padding-bottom: 1rem;
+}
+
+.product .box-container .box .content .stars i{
+  font-size: 1.7rem;
+  color:var(--orange);
+}
+
+.loadmore {
+ 
+  margin-top: 30px;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: #cce7d0;
+  font-weight: 600;
+  font-size: 25px;
+  border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left:40%;
+margin-right: 40%;
+font-size: 16px;
+text-align: center;
+}
+
+.loadmore:hover{
+ background-color: var(--orange);
+ color: white;
+}
+/*latest products end */
